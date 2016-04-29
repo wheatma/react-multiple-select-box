@@ -1,3 +1,3 @@
-import MultipleSelectBox from './lib/react-multiple-select-box'
+'use strict';
 
-export default MultipleSelectBox;
+module.exports = require('./dist/react-multiple-select-box');

@@ -4,6 +4,8 @@
   "description": "a react multiple select support async load and hierarchy display",
   "main": "index.js",
   "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "mkdir dist & webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -34,6 +36,7 @@
     "babel-plugin-transform-class-properties": "^6.6.0",
     "babel-plugin-transform-function-bind": "^6.5.2",
     "babel-preset-es2015": "^6.3.13",
-    "babel-preset-react": "^6.3.13"
+    "babel-preset-react": "^6.3.13",
+    "webpack": "^1.12.9"
   }
 }
