@@ -277,13 +277,13 @@ export default class MultipleSelectBox extends Component {
 
     renderOption(item, index, key) {
         if (item.hasOwnProperty('subLen') || item.hasOwnProperty('sub')) {
-            return this.renderClassify(item, index, key);
+            return this.renderClassification(item, index, key);
         } else {
             return this.renderRow(item);
         }
     }
 
-    renderClassify(item, index, key) {
+    renderClassification(item, index, key) {
         let loaded = (item.hasOwnProperty('sub') && item.sub.length == item.subLen) ? true : false;
         if (key === '') {
             key = item.id;
@@ -291,8 +291,8 @@ export default class MultipleSelectBox extends Component {
             key += '-' + item.id;
         }
         return (
-            <li key={key} className="react-multi-select-classify">
-                <div className="classify" onClick={this.handleToggleOption.bind(this, key, index, loaded)} loaded={loaded}>
+            <li key={key} className="react-multi-select-classification">
+                <div className="classification" onClick={this.handleToggleOption.bind(this, key, index, loaded)} loaded={loaded}>
                     <i className="react-multi-select-list-arrow"/>
                     <span>{item.text + '(' + (item.subLen ? item.subLen : (item.sub ? item.sub.length : 0)) + ')'}</span>
                 </div>

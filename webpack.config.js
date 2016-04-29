@@ -13,6 +13,10 @@ module.exports = {
         libraryTarget: 'umd',
         umdNamedDefine: true
     },
+    devtool: '#source-map',
+    externals: {
+        react: 'react',
+    },
     module: {
         loaders: [{
             test: /\.js?$/,

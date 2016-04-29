@@ -1,11 +1,11 @@
 {
   "name": "react-multiple-select-box",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "a react multiple select support async load and hierarchy display",
   "main": "index.js",
   "scripts": {
     "prebuild": "rm -rf dist",
-    "build": "mkdir dist & webpack",
+    "build": "mkdir dist & NODE_ENV=production webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
