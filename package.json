@@ -1,6 +1,6 @@
 {
   "name": "react-multiple-select-box",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "a react multiple select support async load and hierarchy display",
   "main": "index.js",
   "scripts": {
