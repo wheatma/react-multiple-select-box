@@ -9,7 +9,9 @@ module.exports = {
     entry: path.resolve(SRC_PATH, 'react-multiple-select-box.js'),
     output: {
         path: BUILD_PATH,
-        filename: "react-multiple-select-box.js"
+        filename: "react-multiple-select-box.js",
+        libraryTarget: 'umd',
+        umdNamedDefine: true
     },
     module: {
         loaders: [{
