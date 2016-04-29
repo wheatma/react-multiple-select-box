@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import 'whatwg-fetch';
 
 let idInc = 0;
 
@@ -54,20 +53,11 @@ export default class MultipleSelectBox extends Component {
     }
 
     componentWillMount() {
-        if (this.state.options.length === 0 && this.props.async && this.props.requestUrl) {
-            fetch(this.props.requestUrl + '?id=-1').then(res => {
-                // res instanceof Response == true.
-                if (res.ok) {
-                    res.json().then(data => {
-                        this.setState({
-                            options: data.data
-                        });
-                    });
-                } else {
-                    console.log("Looks like the response wasn't perfect, got status", res.status);
-                }
-            }, e => {
-                console.log("Fetch failed!", e);
+        if (this.state.options.length === 0 && this.props.async && typeof this.props.asyncFetch == 'function') {
+            this.props.asyncFetch(-1).then((data) => {
+                this.setState({
+                    options: data
+                });
             });
         }
     }
@@ -229,24 +219,12 @@ export default class MultipleSelectBox extends Component {
             iconDOM.setAttribute('class', toggleClass(iconDOM.getAttribute('class'), 'expand'));
             ulDOM.setAttribute('class', toggleClass(ulDOM.getAttribute('class'), 'react-multi-select-hide'));
         } else {
-            fetch(this.props.requestUrl + '?id=' + key).then(res => {
-                // res instanceof Response == true.
-                if (res.ok) {
-                    res.json().then(data => {
-                        let items = data.data;
-                        let options = this.state.options;
-                        options = this.setOption(options, items, index);
-                        this.setState({
-                            options: options
-                        });
-                        iconDOM.setAttribute('class', toggleClass(iconDOM.getAttribute('class'), 'expand'));
-                        ulDOM.setAttribute('class', toggleClass(ulDOM.getAttribute('class'), 'react-multi-select-hide'));
-                    });
-                } else {
-                    console.log("Looks like the response wasn't perfect, got status", res.status);
-                }
-            }, e => {
-                console.log("Fetch failed!", e);
+            this.props.asyncFetch(key).then((items) => {
+                this.setState({
+                    options: this.setOption(this.state.options, items, index)
+                });
+                iconDOM.setAttribute('class', toggleClass(iconDOM.getAttribute('class'), 'expand'));
+                ulDOM.setAttribute('class', toggleClass(ulDOM.getAttribute('class'), 'react-multi-select-hide'));
             });
         }
     }

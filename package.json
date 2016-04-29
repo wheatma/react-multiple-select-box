@@ -27,8 +27,7 @@
   "homepage": "https://github.com/wheatma/react-multiple-select-box#readme",
   "dependencies": {
     "react": "^15.0.1",
-    "react-dom": "^15.0.1",
-    "whatwg-fetch": "^1.0.0"
+    "react-dom": "^15.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.3.15",
