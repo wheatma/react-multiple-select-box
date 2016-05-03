@@ -1,6 +1,6 @@
 {
   "name": "react-multiple-select-box",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "description": "a react multiple select support async load and hierarchy display",
   "main": "index.js",
   "scripts": {
@@ -26,8 +26,7 @@
   },
   "homepage": "https://github.com/wheatma/react-multiple-select-box#readme",
   "dependencies": {
-    "react": "^15.0.1",
-    "react-dom": "^15.0.1"
+    "react": "^0.14.1"
   },
   "devDependencies": {
     "babel-core": "^6.3.15",

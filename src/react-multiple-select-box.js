@@ -43,6 +43,7 @@ export default class MultipleSelectBox extends Component {
         clearText: 'clear',
         confirmText: 'ok',
         cancelText: 'cancel',
+        'selectedLable': 'selected',
         nameText: '',
         value: [],
         options: [],
@@ -54,7 +55,7 @@ export default class MultipleSelectBox extends Component {
 
     componentWillMount() {
         if (this.state.options.length === 0 && this.props.async && typeof this.props.asyncFetch == 'function') {
-            this.props.asyncFetch(-1).then((data) => {
+            this.props.asyncFetch(-1).then(data => {
                 this.setState({
                     options: data
                 });
@@ -70,10 +71,7 @@ export default class MultipleSelectBox extends Component {
     }
 
     label() {
-        var selected = this.state.value
-            .map((option) => {
-                return option.text
-            })
+        var selected = this.state.value.map(option => option.text);
         return selected.length > 0 ? selected.join(', ') : this.props.label;
     }
 
@@ -219,7 +217,7 @@ export default class MultipleSelectBox extends Component {
             iconDOM.setAttribute('class', toggleClass(iconDOM.getAttribute('class'), 'expand'));
             ulDOM.setAttribute('class', toggleClass(ulDOM.getAttribute('class'), 'react-multi-select-hide'));
         } else {
-            this.props.asyncFetch(key).then((items) => {
+            this.props.asyncFetch(key).then(items => {
                 this.setState({
                     options: this.setOption(this.state.options, items, index)
                 });
@@ -318,7 +316,7 @@ export default class MultipleSelectBox extends Component {
     renderSelectedValue() {
         return (
             <div className="react-multi-select-col">
-                <div className="react-multiple-select-type-name">已选{this.props.nameText}：</div>
+                <div className="react-multiple-select-type-name">{this.props.selectedLable + this.props.nameText}：</div>
                 <ul>
                 {
                     this.state.pendingValue.map((item, index) => {
