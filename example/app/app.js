@@ -22,7 +22,6 @@ export class SimpleDisplayApp extends Component {
                 <MultipleSelectBox
                     options={this.state.options}
                     value={this.state.value}
-                    selectedLabel="selected "
                     nameText="career"
                 />
             </div>
@@ -46,7 +45,6 @@ export class HierarchyDisplayApp extends Component {
                 <MultipleSelectBox
                     options={this.state.options}
                     value={this.state.value}
-                    selectedLabel="selected "
                     nameText="city"
                 />
             </div>
@@ -81,7 +79,6 @@ export class AsyncLoadApp extends Component {
                 <MultipleSelectBox
                     options={this.state.options}
                     value={this.state.value}
-                    selectedLabel="selected "
                     nameText="region"
                     async={true}
                     asyncFetch={::this.asyncFetch}
