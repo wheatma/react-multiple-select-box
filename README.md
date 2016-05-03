@@ -70,8 +70,8 @@ $ npm install react-multiple-select-box --save
     </tr>
     <tr>
         <td>asyncFetch</td>
-        <td>false</td>
-        <td>whether need to async load data. if set true, the async load options should have key "subLen"</td>
+        <td></td>
+        <td>if async is set to be true, you should add this prop, a function returns a promise</td>
     </tr>
     <tr>
         <td>onConfirmCallback</td>
