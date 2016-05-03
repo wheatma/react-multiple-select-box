@@ -1,6 +1,6 @@
 {
   "name": "react-multiple-select-box",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "a react multiple treeview select supports async load and hierarchy display",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/wheatma/react-multiple-select-box#readme",
   "dependencies": {
-    "react": "^0.14.1"
+    "react": ">0.14.0"
   },
   "devDependencies": {
     "babel-core": "^6.3.15",
