@@ -2,11 +2,7 @@ import React from 'react'
 
 import ReactDOM from 'react-dom'
 
-import SimpleDisplayApp from './SimpleDisplay'
-
-import HierarchyDisplayApp from './HierarchyDisplay'
-
-import AsyncLoadApp from './AsyncLoad'
+import { SimpleDisplayApp, HierarchyDisplayApp, AsyncLoadApp } from './app'
 
 import './css/main.scss'
 
