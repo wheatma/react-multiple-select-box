@@ -600,7 +600,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    nameText: '',
 	    value: [],
 	    options: [],
-	    requestUrl: '/',
 	    async: false,
 	    onConfirmCallback: function onConfirmCallback() {},
 	    onCancelCallback: function onCancelCallback() {}

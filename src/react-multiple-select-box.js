@@ -47,7 +47,6 @@ export default class MultipleSelectBox extends Component {
         nameText: '',
         value: [],
         options: [],
-        requestUrl: '/',
         async: false,
         onConfirmCallback: () => {},
         onCancelCallback: () => {},
