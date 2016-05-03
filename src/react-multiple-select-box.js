@@ -43,7 +43,7 @@ export default class MultipleSelectBox extends Component {
         clearText: 'clear',
         confirmText: 'ok',
         cancelText: 'cancel',
-        'selectedLable': 'selected',
+        selectedLabel: 'selected',
         nameText: '',
         value: [],
         options: [],
@@ -316,7 +316,7 @@ export default class MultipleSelectBox extends Component {
     renderSelectedValue() {
         return (
             <div className="react-multi-select-col">
-                <div className="react-multiple-select-type-name">{this.props.selectedLable + this.props.nameText}：</div>
+                <div className="react-multiple-select-type-name">{this.props.selectedLabel + this.props.nameText}：</div>
                 <ul>
                 {
                     this.state.pendingValue.map((item, index) => {

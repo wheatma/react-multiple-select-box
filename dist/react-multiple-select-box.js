@@ -514,7 +514,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'react-multiple-select-type-name' },
-	                    this.props.selectedLable + this.props.nameText,
+	                    this.props.selectedLabel + this.props.nameText,
 	                    '：'
 	                ),
 	                _react2.default.createElement(
@@ -596,7 +596,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    clearText: 'clear',
 	    confirmText: 'ok',
 	    cancelText: 'cancel',
-	    'selectedLable': 'selected',
+	    selectedLabel: 'selected',
 	    nameText: '',
 	    value: [],
 	    options: [],
