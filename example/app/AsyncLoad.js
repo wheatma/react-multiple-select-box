@@ -17,7 +17,7 @@ export default class AsyncLoadApp extends Component {
     }
 
     asyncFetch(id) {
-        return fetch('/mocks/region.json?id=' + id).then(res => {
+        return fetch('/react-multiple-select-box/mocks/region.json?id=' + id).then(res => {
             // res instanceof Response == true.
             return res.json().then(data => data.data);
         }, e => {
