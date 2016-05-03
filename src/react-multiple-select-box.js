@@ -43,7 +43,7 @@ export default class MultipleSelectBox extends Component {
         clearText: 'clear',
         confirmText: 'ok',
         cancelText: 'cancel',
-        selectedLabel: 'selected',
+        selectedLabel: 'selected ',
         nameText: '',
         value: [],
         options: [],
