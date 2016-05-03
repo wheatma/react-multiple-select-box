@@ -596,7 +596,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    clearText: 'clear',
 	    confirmText: 'ok',
 	    cancelText: 'cancel',
-	    selectedLabel: 'selected',
+	    selectedLabel: 'selected ',
 	    nameText: '',
 	    value: [],
 	    options: [],
