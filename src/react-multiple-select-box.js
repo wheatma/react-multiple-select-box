@@ -259,7 +259,7 @@ export default class MultipleSelectBox extends Component {
     }
 
     renderClassification(item, index, key) {
-        let loaded = (item.hasOwnProperty('sub') && item.sub.length == item.subLen) ? true : false;
+        let loaded = ((item.hasOwnProperty('sub') && item.sub.length == item.subLen) || !item.hasOwnProperty('subLen')) ? true : false;
         if (key === '') {
             key = item.id;
         } else {

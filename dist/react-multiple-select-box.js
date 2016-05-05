@@ -436,7 +436,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        value: function renderClassification(item, index, key) {
 	            var _this8 = this;
 	
-	            var loaded = item.hasOwnProperty('sub') && item.sub.length == item.subLen ? true : false;
+	            var loaded = item.hasOwnProperty('sub') && item.sub.length == item.subLen || !item.hasOwnProperty('subLen') ? true : false;
 	            if (key === '') {
 	                key = item.id;
 	            } else {

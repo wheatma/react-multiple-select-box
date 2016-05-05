@@ -1,6 +1,6 @@
 {
   "name": "react-multiple-select-box",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "a react multiple treeview select supports async load and hierarchy display",
   "main": "index.js",
   "scripts": {
