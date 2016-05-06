@@ -1,5 +1,7 @@
 # react-multiple-select-box
-a react multiple treeview select supports async load and hierarchy display
+A react treeview multiple select supports async load and hierarchy display
+
+[![Build Status](https://travis-ci.org/wheatma/react-multiple-select-box.svg?branch=master)](https://travis-ci.org/wheatma/react-multiple-select-box)
 
 ## Demo
 http://wheatma.github.io/react-multiple-select-box/
