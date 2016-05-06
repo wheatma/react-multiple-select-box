@@ -76,7 +76,7 @@ $placeholderColor: #c5c5c5;
 }
 .react-multi-select-col {
     min-width: 110px;
-    overflow-y: scroll;
+    overflow-y: auto;
     .selected-option-row {
         padding: 5px 0;
         cursor: pointer;
